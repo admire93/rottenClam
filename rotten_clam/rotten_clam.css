@@ -7,7 +7,33 @@ h1 {
   padding: 50px 20px;
   color: #F1F7E2;
 }
+#alert {
+  background: #F1F7E2;
+  padding: 50px 20px;
+}
+#alert ul {
+  margin: 0; padding: 0;
+  list-style:none;
+  background: #F1F7E2;
+}
+#alert ul li{
+  background: #F1F7E2;
+  float: left;
+  width: 40%;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+#alert ul li span {
+  background: #F1F7E2;
+}
+#alert ul .success {
+  color: #3A6AB8;
+}
+#alert ul .fail {
+  color: #CF5249;
+}
 .test {
+  clear:left;
   margin 0; padding: 0;
 }
 .test h2 {

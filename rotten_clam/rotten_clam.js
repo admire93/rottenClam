@@ -1,6 +1,6 @@
  var rottenClam = {
    initialize: function(name) {
-     $('body').html('<h1>' + name +'</h1> <div id=\'result\'></div>');
+     $('body').html('<h1>' + name +'</h1> <div id=\'alert\'><ul><li class=\'success\'>Success: <span>0</span></li><li class=\'fail\'>Fail: <span>0</span></li></ul></div><div id=\'result\'></div>');
    },
         template: function(res, expected, message, ok) {
           var tem_body = '<div class="tresult"><h3>Result</h3>'; 
@@ -35,12 +35,12 @@
           var resType = typeof(result);
           var ok = false;
           if(resType == undefined) {
-            $('#result').html($('#result').html() + this.template(result,expected, message, ok));
+            this.test(result, expected, message, ok); 
           } else if(resType=='string'||resType=='boolean'||resType=='number') {
             if(result == expected) {
               ok = true;
             }
-            $('#result').html($('#result').html() + this.template(result,expected, message, ok));
+            this.test(result, expected, message, ok);
           } else if(resType=='object') {
             ok = true;
             try {
@@ -58,7 +58,7 @@
             } catch(e) {
               ok = false;
             }
-            $('#result').html($('#result').html() + this.template(result,expected, message, ok));
+            this.test(result, expected, message, ok);
           }
         },
         ok: function(res,message) {
@@ -74,5 +74,18 @@
             ok = true;
           }
           this.equal(res, false, message, ok);
-        }
+        },
+        raise: function(type) {
+          var o = $('#alert > ul > .' + type +' > span');
+          o.html(parseInt(o.text()) + 1);
+        },
+        test: function(result, expected, message, ok) {
+          $('#result').html($('#result').html() + this.template(result,expected, message, ok));
+
+          if(ok) {
+            this.raise('success');
+          } else {
+            this.raise('fail');
+          }
+        }, 
 };
