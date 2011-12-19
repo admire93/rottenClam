@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>rotten clam</title>
+  <link rel="stylesheet" type="text/css" href="./rotten_clam/rotten_clam.css" />
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+  <script type="text/javascript" src="./rotten_clam/rotten_clam.js"></script>
+</head>
+<body>
+  <script>
+    rottenClam.initialize('Rotten clam examples');
+
+    rottenClam.equal(1, 1, 'Number Success test');
+    rottenClam.equal(1, 2, 'Number Fail test');
+    rottenClam.equal('string', 'string', 'String success test');
+    rottenClam.equal('string', 'string', 'String fail test');
+    rottenClam.equal([1,2,3], [1,2,3], 'Array success test');
+    rottenClam.equal([1,2,3], [1,2,2], 'Array fail test 1');
+    rottenClam.equal([1,2,3], [1,2,3,4], 'Array fail test 2');
+    rottenClam.equal({a:1, b:2}, {a:1, b:2}, 'Object success test');
+    rottenClam.equal({a:1, b:2}, {a:1}, 'Object Fail test 1');
+    rottenClam.equal({a:1}, {a:1, b:2}, 'Object Fail test 2');
+    rottenClam.equal({a:1}, {a:2}, 'Object Fail test 3');
+    rottenClam.ok(true, 'True test');
+    rottenClam.fail(false, 'Fail test');
+  </script>
+</body>
+</html>
