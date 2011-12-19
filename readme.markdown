@@ -10,7 +10,7 @@ First of all rotten clam work with [jQuery](http://jquery.com) you should includ
     <html>
       <head>
         <link rel="stylesheet" type="text/css" href="./rotten_clam/rotten_clam.css" />
-        <script type="text/javascript" src="'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
         <script type="text/javascript" src="./rotten_clam/rotten_clam.js"></script>
 
         ....
@@ -56,3 +56,22 @@ A boolean assertation. equivalent to `rottenClam.equal(boolean, fail, message)`
 
 A assertation for all type (number, string, object). However it didn't support function assertatoin.
 
+## Examples
+
+A number, string, object assertation.
+
+    rottenClam.equal(1, 1, 'Number Success test');
+    rottenClam.equal(1, 2, 'Number Fail test');
+    rottenClam.equal('string', 'string', 'String success test');
+    rottenClam.equal('string', 'string', 'String fail test');
+    rottenClam.equal([1,2,3], [1,2,3], 'Array success test');
+    rottenClam.equal([1,2,3], [1,2,3,4], 'Array fail test');
+    rottenClam.equal({a:1, b:2}, {a:1, b:2}, 'Object success test');
+    rottenClam.equal({a:1, b:2}, {a:1}, 'Object Fail test 1');
+    rottenClam.equal({a:1}, {a:1, b:2}, 'Object Fail test 2');
+    rottenClam.equal({a:1}, {a:2}, 'Object Fail test 3');
+
+A boolean asseration.
+
+    rottenClam.ok(true, 'True test');
+    rottenClam.fail(false, 'Fail test');
