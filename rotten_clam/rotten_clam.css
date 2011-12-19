@@ -1,0 +1,54 @@
+* {
+  margin: 0; padding: 0;
+  background: #4FA9B8;
+}
+h1 {
+  background: #4B73C5;
+  padding: 50px 20px;
+  color: #F1F7E2;
+}
+.test {
+  margin 0; padding: 0;
+}
+.test h2 {
+  background: #202B30; 
+  padding: 50px 20px;
+  color: #F1F7E2;
+}
+.tresult {
+  background: #4FA9B8;
+  padding: 30px 20px;
+}
+.tresult h3 {
+  margin: 20px 20px;
+  color: #F1F7E2;
+}
+.tresult p {
+  padding: 30px 20px;
+  background: #F1F7E2;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.tresult .success {
+  color: #3A6AB8;
+}
+.tresult .fail {
+  color: #CF5249;
+}
+.tresult ul{
+  list-style: none;
+}
+.tresult ul li {
+  padding: 30px 20px;
+}
+.tresult ul .value, .tresult ul .value span{
+  background: #CF5249;
+}
+.tresult ul .expect, .tresult ul .expect span{
+  background: #00783A;
+}
+.tresult ul li span {
+  color: #FFF0DD;
+  font-size: 1.2em;
+}
+
