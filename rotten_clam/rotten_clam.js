@@ -48,6 +48,12 @@
                 if(result[i] != expected[i]) {
                   ok = false;
                 }
+              
+              }
+              for(i in expected) {
+                if(result[i] != expected[i]) {
+                  ok = false;
+                }
               }
             } catch(e) {
               ok = false;
